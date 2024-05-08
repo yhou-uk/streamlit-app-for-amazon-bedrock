@@ -16,12 +16,12 @@ Parameters:
   CodeCommitURL:
     Type: String
     Description: Code Commit repository link
-    Default:
+    Default: ""
     
   RepoName:
     Type: String
     Description: Code Commit repository name
-    Default: 
+    Default: ""
 
   EnvironmentName:
     Description: (containing letters or numbers) Unique name to distinguish different web application in the same AWS account- min length 1 and max length 4
