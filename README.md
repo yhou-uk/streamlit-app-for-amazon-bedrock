@@ -77,6 +77,10 @@ After deleting these three stacks, all the resources created by the project will
 
 Note: Deleting the stacks will permanently remove all the associated resources. Make sure you have backed up any important data or configurations before proceeding with the cleanup process.
 
+## Video demo
+
+![Demo](assets/chatbot-demo.gif)
+
 ## Acknowledgements
    This project is based on the excellent work done in the [Customer relationship management (CRM) Bedrock Agent](https://github.com/aws-samples/amazon-bedrock-samples/tree/function_calling/agents/customer-relationship-management-agent). We would like to express our sincere appreciation to the authors and contributors of that repository for their effort and inspiration.
 
