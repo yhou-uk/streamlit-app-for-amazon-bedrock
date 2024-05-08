@@ -1,1 +1,1 @@
-from util.bedrock import BedrockAgent
+from utils.bedrock import BedrockAgent
