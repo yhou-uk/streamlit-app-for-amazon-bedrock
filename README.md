@@ -81,6 +81,18 @@ Note: Deleting the stacks will permanently remove all the associated resources. 
 
 ![Demo](assets/chatbot-demo.gif)
 
+## New Feature: Access Control Page 
+
+You can register new users from two locations:
+
+- Add new user information in the config.yaml file before deploying the CloudFormation stack.
+- After the application is implemented, you can register new users via the access control page.
+
+The Streamlit authentication capability is provided by this [solution](https://github.com/mkhorasani/Streamlit-Authenticator/tree/main).
+
+![authentcation](assets/authentication.png)
+
+
 ## Acknowledgements
    This project is based on the excellent work done in the [Customer relationship management (CRM) Bedrock Agent](https://github.com/aws-samples/amazon-bedrock-samples/tree/function_calling/agents/customer-relationship-management-agent). We would like to express our sincere appreciation to the authors and contributors of that repository for their effort and inspiration.
 

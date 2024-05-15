@@ -287,10 +287,29 @@ Resources:
         Statement:
           - Effect: Allow
             Principal:
-              Service: ecs-tasks.amazonaws.com
+              Service: 
+              - ecs-tasks.amazonaws.com
+              - application-autoscaling.amazonaws.com
             Action: 'sts:AssumeRole'
       ManagedPolicyArns:
         - 'arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole'
+      # Add necessary permissions for ApplicationAutoScaling
+      Policies:
+        - PolicyName: ApplicationAutoScalingPermissions
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'cloudwatch:PutMetricAlarm'
+                  - 'cloudwatch:DescribeAlarms'
+                  - 'cloudwatch:DeleteAlarms'
+                  - 'autoscaling:DescribeAutoScalingGroups'
+                  - 'autoscaling:DescribeAutoScalingInstances'
+                  - 'autoscaling:SetDesiredCapacity'
+                  - 'autoscaling:TerminateInstanceInAutoScalingGroup'
+                  - 'iam:UpdateAssumeRolePolicy'
+                Resource: '*'
   
   # AutoScaling
   StreamlitAutoScalingTarget:
